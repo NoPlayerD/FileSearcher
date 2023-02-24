@@ -1,0 +1,22 @@
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\bin\Debug\FileSearcher.exe.config
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\bin\Debug\FileSearcher.exe
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\bin\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\bin\Debug\FileSearcher.xml
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.vbprojResolveAssemblyReference.cache
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.Form1.resources
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.Resources.resources
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.vbproj.GenerateResource.Cache
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.exe
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.xml
+C:\Users\NoPlayer\AppData\Local\Temporary Projects\FileSearcher\obj\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\bin\Debug\FileSearcher.exe.config
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.exe
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.xml
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\bin\Debug\FileSearcher.exe
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\bin\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\bin\Debug\FileSearcher.xml
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.vbprojResolveAssemblyReference.cache
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Form1.resources
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Resources.resources
+C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.vbproj.GenerateResource.Cache
