@@ -144,4 +144,14 @@ Public Class Form1
     Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
         Label3.Visible = False
     End Sub
+    Private Function chfname()
+        Dim nms As String()
+
+        For i As Integer = 0 To ListBox1.Items.Count - 1
+            nms(i) = ListBox1.GetItemText(ListBox1.Items(i))
+            Debug.WriteLine(nms(i))
+        Next
+
+        Return True
+    End Function
 End Class

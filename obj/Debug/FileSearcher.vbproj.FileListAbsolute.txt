@@ -20,3 +20,14 @@ C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearche
 C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Form1.resources
 C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Resources.resources
 C:\Users\NoPlayer\Documents\Visual Studio 2015\Projects\FileSearcher\FileSearcher\obj\Debug\FileSearcher.vbproj.GenerateResource.Cache
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\bin\Debug\FileSearcher.exe.config
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.exe
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.xml
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\bin\Debug\FileSearcher.exe
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\bin\Debug\FileSearcher.pdb
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\bin\Debug\FileSearcher.xml
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.vbprojResolveAssemblyReference.cache
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Form1.resources
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.Resources.resources
+C:\Users\NoPlayer\Desktop\FileSearcher\FileSearcher\obj\Debug\FileSearcher.vbproj.GenerateResource.Cache
