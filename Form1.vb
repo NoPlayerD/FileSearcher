@@ -35,7 +35,7 @@ Public Class Form1
         Catch ex As Exception
             MsgBox("Error..")
         End Try
-
+        If Not TextBox1.Text = vbNullString Then chfname()
         Return True
     End Function
 
@@ -145,13 +145,30 @@ Public Class Form1
         Label3.Visible = False
     End Sub
     Private Function chfname()
-        Dim nms As String()
+        Dim count As Integer = ListBox1.Items.Count
+        Dim ctrl As Integer = 0
+        Dim alt As Integer = 0
+        Dim indexs(count) As Integer
+        Dim nms(count) As String
+        'Dim del() As Integer
 
-        For i As Integer = 0 To ListBox1.Items.Count - 1
-            nms(i) = ListBox1.GetItemText(ListBox1.Items(i))
-            Debug.WriteLine(nms(i))
+        For i As Integer = 1 To ListBox1.Items.Count
+            nms(i) = ListBox1.GetItemText(ListBox1.Items(i - 1))
+            Dim name = nms(i).Remove(0, nms(i).LastIndexOfAny("\") + 1)
+
+            If Not name.Contains(TextBox1.Text) Then
+                ctrl += 1
+                indexs(ctrl) = i
+            End If
         Next
+
+        For i As Integer = 1 To ctrl
+            alt += 1
+            ListBox1.Items.RemoveAt(indexs(i) - alt)
+        Next
+
 
         Return True
     End Function
+
 End Class
