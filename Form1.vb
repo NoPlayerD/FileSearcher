@@ -36,7 +36,11 @@ Public Class Form1
         Catch ex As Exception
             MsgBox("Error..")
         End Try
-        If Not TextBox1.Text = vbNullString Then chfname()
+        If Not TextBox1.Text = vbNullString Then
+            chfname()
+        ElseIf TextBox1.Text = vbNullString And Not TextBox3.Text = vbNullString Then
+            chfext()
+        End If
 
         If both = True Then
             'both = False
@@ -59,13 +63,14 @@ Public Class Form1
             Else
                 Dim dir As String() = Directory.GetDirectories(path)
                 For Each folder As String In dir
-                    ListBox1.Items.Add(folder)
+                    ListBox1.Items.Add(folder + "\")
                 Next
             End If
         Catch ex As Exception
             MsgBox("Error..")
         End Try
 
+        If Not TextBox1.Text = vbNullString Then chfname()
         Return True
     End Function
 
@@ -95,7 +100,7 @@ Public Class Form1
         Next
     End Sub
     Private Sub LoadSubDirs(dir As String)
-        ListBox1.Items.Add(dir)
+        ListBox1.Items.Add(dir + "\")
         Dim subdirectoryEntries As String() = Directory.GetDirectories(dir)
         For Each subdirectory As String In subdirectoryEntries
             LoadSubDirs(subdirectory)
@@ -114,13 +119,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub TextBox3_GotFocus(sender As Object, e As EventArgs)
-        Label3.Visible = True
-    End Sub
-
-    Private Sub TextBox3_Leave(sender As Object, e As EventArgs)
-        Label3.Visible = False
-    End Sub
     Private Function chfname()
         Dim count As Integer = ListBox1.Items.Count
         Dim ctrl As Integer = 0
@@ -175,4 +173,12 @@ Public Class Form1
 
         Return True
     End Function
+
+    Private Sub TextBox3_GotFocus(sender As Object, e As EventArgs) Handles TextBox3.GotFocus
+        Label3.Visible = True
+    End Sub
+
+    Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
+        Label3.Visible = False
+    End Sub
 End Class
