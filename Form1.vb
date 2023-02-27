@@ -2,6 +2,7 @@
 
 Public Class Form1
     Dim path As String
+    Dim both As Boolean = False
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If CheckBox1.Checked = True Then getfile(1) Else getfile(0)
     End Sub
@@ -36,12 +37,23 @@ Public Class Form1
             MsgBox("Error..")
         End Try
         If Not TextBox1.Text = vbNullString Then chfname()
+
+        If both = True Then
+            'both = False
+            If CheckBox1.Checked = True Then getdir(1) Else getdir(0)
+        End If
+
         Return True
     End Function
 
     Private Function getdir(ctrl As Integer)
         Try
-            ListBox1.Items.Clear()
+            If Not both = True Then
+                ListBox1.Items.Clear()
+            Else
+                both = False
+            End If
+
             If ctrl = 1 Then
                 GetSubDirectories()
             Else
@@ -50,43 +62,6 @@ Public Class Form1
                     ListBox1.Items.Add(folder)
                 Next
             End If
-        Catch ex As Exception
-            MsgBox("Error..")
-        End Try
-
-        Return True
-    End Function
-    Private Function both(ctrl As Integer)
-        Try
-            ListBox1.Items.Clear()
-
-            If ctrl = 1 Then
-                Dim txtFilesArray As String() = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories)
-                Dim max As Int64 = txtFilesArray.Count
-                ProgressBar1.Maximum = max
-
-                For i As Integer = 0 To txtFilesArray.Count - 1
-                    ListBox1.Items.Add(txtFilesArray(i))
-                    ProgressBar1.Value = i + 1
-                Next
-                GetSubDirectories()
-
-            Else
-
-                Dim txtFilesArray As String() = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly)
-                Dim max As Int64 = txtFilesArray.Count
-                ProgressBar1.Maximum = max
-
-                For i As Integer = 0 To txtFilesArray.Count - 1
-                    ListBox1.Items.Add(txtFilesArray(i))
-                    ProgressBar1.Value = i + 1
-                Next
-                Dim dir As String() = Directory.GetDirectories(path)
-                For Each folder As String In dir
-                    ListBox1.Items.Add(folder)
-                Next
-            End If
-
         Catch ex As Exception
             MsgBox("Error..")
         End Try
@@ -128,7 +103,9 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If CheckBox1.Checked = True Then both(1) Else both(0)
+        both = True
+        If CheckBox1.Checked = True Then getfile(1) Else getfile(0)
+
     End Sub
 
     Private Sub Form1_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
@@ -137,11 +114,11 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub TextBox3_GotFocus(sender As Object, e As EventArgs) Handles TextBox3.GotFocus
+    Private Sub TextBox3_GotFocus(sender As Object, e As EventArgs)
         Label3.Visible = True
     End Sub
 
-    Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
+    Private Sub TextBox3_Leave(sender As Object, e As EventArgs)
         Label3.Visible = False
     End Sub
     Private Function chfname()
@@ -167,8 +144,35 @@ Public Class Form1
             ListBox1.Items.RemoveAt(indexs(i) - alt)
         Next
 
+        If Not TextBox3.Text = vbNullString Then chfext()
 
         Return True
     End Function
 
+    Private Function chfext()
+        Dim count As Integer = ListBox1.Items.Count
+        Dim ctrl As Integer = 0
+        Dim alt As Integer = 0
+        Dim indexs(count) As Integer
+        Dim nms(count) As String
+        Dim ext As String = TextBox3.Text
+
+        For i As Integer = 1 To ListBox1.Items.Count
+            nms(i) = ListBox1.GetItemText(ListBox1.Items(i - 1))
+            Dim name = nms(i).Remove(0, nms(i).LastIndexOfAny(".") + 1)
+
+            If Not name = ext Then
+                ctrl += 1
+                indexs(ctrl) = i
+            End If
+        Next
+
+        For i As Integer = 1 To ctrl
+            alt += 1
+            ListBox1.Items.RemoveAt(indexs(i) - alt)
+        Next
+
+
+        Return True
+    End Function
 End Class
