@@ -37,7 +37,7 @@ Public Class Form1
             MsgBox("Error..")
         End Try
         If Not TextBox1.Text = vbNullString Then
-            chfname()
+            chfname(1)
         ElseIf TextBox1.Text = vbNullString And Not TextBox3.Text = vbNullString Then
             chfext()
         End If
@@ -70,7 +70,7 @@ Public Class Form1
             MsgBox("Error..")
         End Try
 
-        If Not TextBox1.Text = vbNullString Then chfname()
+        If Not TextBox1.Text = vbNullString Then chfname(2)
         Return True
     End Function
 
@@ -119,7 +119,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Function chfname()
+    Private Function chfname(type As Integer)
         Dim count As Integer = ListBox1.Items.Count
         Dim ctrl As Integer = 0
         Dim alt As Integer = 0
@@ -129,7 +129,13 @@ Public Class Form1
 
         For i As Integer = 1 To ListBox1.Items.Count
             nms(i) = ListBox1.GetItemText(ListBox1.Items(i - 1))
-            Dim name = nms(i).Remove(0, nms(i).LastIndexOfAny("\") + 1)
+            Dim name As String
+            If type = 1 Then
+                name = nms(i).Remove(0, nms(i).LastIndexOfAny("\") + 1)
+            Else
+                Dim nm1 = nms(i).Remove(nms(i).LastIndexOfAny("\"))
+                name = nm1.Remove(0, nm1.LastIndexOfAny("\") + 1)
+            End If
 
             If Not name.Contains(TextBox1.Text) Then
                 ctrl += 1
