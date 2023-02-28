@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -99,7 +100,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Location = New System.Drawing.Point(547, 38)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 381)
+        Me.GroupBox1.Size = New System.Drawing.Size(311, 234)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
@@ -189,9 +190,9 @@ Partial Class Form1
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(11, 346)
+        Me.Button5.Location = New System.Drawing.Point(6, 193)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(42, 29)
+        Me.Button5.Size = New System.Drawing.Size(299, 29)
         Me.Button5.TabIndex = 10
         Me.Button5.Text = "Clear"
         Me.Button5.UseVisualStyleBackColor = True
@@ -222,6 +223,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ListBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "File Searcher"
